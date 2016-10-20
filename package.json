@@ -1,0 +1,15 @@
+{
+  "name": "rust-node-addon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build-rust && npm run build-addon",
+    "build-rust": "cargo build --manifest-path ./rust-module/Cargo.toml --release",
+    "build-addon": "node-gyp rebuild -C ./node-addon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {}
+}
